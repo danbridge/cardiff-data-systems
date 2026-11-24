@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A free three-minute checker for office-based organisations: find out where AI agents could genuinely save your team time, and where they shouldn't be used." />
+    <title>AI agent checker — Cardiff Data Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Cardiff Data Systems home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Cardiff<br />Data Systems</span>
+      </a>
+      <div class="header-right">
+        <nav class="site-nav" aria-label="Main">
+          <a href="../index.html">Home</a>
+          <a href="../agents/index.html" aria-current="page">AI agent checker</a>
+          <a href="../about-us/index.html">About</a>
+        </nav>
+        <a class="contact-link" href="mailto:dan@cardiffdatasystems.co.uk">Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero hero-short" aria-labelledby="hero-title">
+        <p class="eyebrow">AI agent checker · Free · About three minutes</p>
+        <h1 id="hero-title">Where could AI agents <em>actually</em> help?</h1>
+        <div class="hero-bottom">
+          <p class="intro">Chat tools answer a question, then stop. Agents do the task, automatically, whenever it comes up. Tell me what eats your team's time and I'll show where agents are worth a look, and where they aren't.</p>
+        </div>
+      </section>
+
+      <form id="checker" class="checker" novalidate>
+        <section class="section-grid" aria-labelledby="biz-title">
+          <p class="section-label">01 / Your organisation</p>
+          <div>
+            <h2 id="biz-title">A little context.</h2>
+            <div class="field">
+              <label for="biz-type">What kind of organisation is it?</label>
+              <select id="biz-type" name="biz-type">
+                <option value="a law firm">Law firm</option>
+                <option value="an accountancy practice">Accountancy practice</option>
+                <option value="a lettings or estate agency">Lettings or estate agency</option>
+                <option value="a charity or faith organisation">Charity, church or community body</option>
+                <option value="a housing association or membership organisation">Housing association or membership body</option>
+                <option value="another professional services firm">Other professional services</option>
+                <option value="another office-based organisation" selected>Other office-based organisation</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="biz-size">How many people work there?</label>
+              <select id="biz-size" name="biz-size">
+                <option value="1–9 people">1–9</option>
+                <option value="10–50 people" selected>10–50</option>
+                <option value="51–150 people">51–150</option>
+                <option value="more than 150 people">More than 150</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="ai-use">How does your team use AI today?</label>
+              <select id="ai-use" name="ai-use">
+                <option value="none">We don't, as far as I know</option>
+                <option value="unsure">Some people probably do, but I'm not sure how</option>
+                <option value="informal">Individuals use free tools like ChatGPT as they see fit</option>
+                <option value="policy">We have approved tools and a clear policy</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-grid" aria-labelledby="tasks-title">
+          <p class="section-label">02 / Where the time goes</p>
+          <div>
+            <h2 id="tasks-title">What eats your team's week?</h2>
+            <p class="form-help">For each task, choose roughly how many hours a week your <strong>whole team</strong> spends on it. Leave it as "None" if it isn't a problem. A rough guess is fine.</p>
+            <ul class="task-list" id="task-list"></ul>
+            <noscript><p class="form-help">This checker needs JavaScript to run. Or just email <a href="mailto:dan@cardiffdatasystems.co.uk">dan@cardiffdatasystems.co.uk</a> and tell me where the time goes.</p></noscript>
+            <div class="form-actions">
+              <button class="button" type="submit">Show me where agents could help <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="form-note">Everything runs in your browser. Nothing you enter is sent anywhere unless you choose to email your results to me.</p>
+          </div>
+        </section>
+      </form>
+
+      <section id="results" class="results" aria-labelledby="results-title" tabindex="-1" hidden>
+        <div class="section-grid">
+          <p class="section-label">03 / Your results</p>
+          <div id="results-body"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand footer-brand" href="../index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Cardiff<br />Data Systems</span></a>
+      <p>Dan Bridge · Software engineer &amp; CTO</p>
+      <a href="mailto:dan@cardiffdatasystems.co.uk">dan@cardiffdatasystems.co.uk</a>
+      <p class="copyright">© <span id="year"></span> Cardiff Data Systems</p>
+    </footer>
+    <script src="../site.js" defer></script>
+    <script src="agents.js" defer></script>
+  </body>
+</html>
