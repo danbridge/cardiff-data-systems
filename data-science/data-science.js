@@ -49,7 +49,7 @@
   var GOALS = [
     { value: 'forecast', label: 'What happens next (forecasting)',
       text: 'You said you most want to know what is likely to happen next. Forecasting depends on a steady, dated history, so your answers on history and consistency matter most.' },
-    { value: 'why', label: 'Why something keeps happening',
+    { value: 'why', label: 'Why it keeps happening',
       text: 'You said you most want to understand why something keeps happening. That needs outcomes recorded alongside the details, so it is worth checking that results are captured as well as activity.' },
     { value: 'prioritise', label: 'What to prioritise',
       text: 'You said you most want to prioritise better. That is usually a scoring approach built on past outcomes, so recorded results matter most.' },
