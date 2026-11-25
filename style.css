@@ -262,3 +262,4 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
 .postcard-item figcaption { margin-top:16px; font-size:15px; color:var(--muted); }
 .postcard-item figcaption strong { color:var(--ink); font-weight:600; }
 @media (prefers-reduced-motion:reduce) { .postcard-inner { transition:none; } }
+.intro .light { font-weight:300; }
