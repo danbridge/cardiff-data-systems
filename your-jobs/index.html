@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Those kinds of jobs · Cardiff Data Systems</title>
+<meta name="description" content="Your IT firm keeps email and Word going. Your office techy gets everything else. Cardiff Data Systems does the jobs in between. Tell us about yours.">
+<!-- Campaign page for the postcard QR. Remove this line if you want the page to appear in search results. -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap">
+<style>
+:root{
+  --blue:#1F4E8C; --blue-dark:#183E70; --tint:#C3D0E3; --tint-soft:#EEF2F8;
+  --ink:#1D1D1F; --text:#515154; --muted:#6C6C6D; --rule:#D2D2D7; --hair:#E3E3E5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--blue)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;padding:28px 0}
+.brand{font-size:20px;letter-spacing:-.01em;color:var(--blue);text-decoration:none;opacity:.85}
+.brand span:nth-child(1){font-weight:300}.brand span:nth-child(2){font-weight:400}.brand span:nth-child(3){font-weight:500}
+.top a.mail{font-size:16px;font-weight:500;text-decoration:none}
+.top a.mail:hover{text-decoration:underline}
+
+/* hero */
+.hero{padding:64px 0 40px}
+h1{margin:0;font-size:clamp(40px,7.4vw,88px);line-height:1.03;letter-spacing:-.035em;font-weight:600;color:var(--blue);text-wrap:balance}
+h1 .grey{color:var(--muted)}
+.lede{margin:30px 0 0;max-width:660px;font-size:clamp(19px,2.2vw,24px);line-height:1.4;letter-spacing:-.012em;color:var(--text)}
+.lede strong{color:var(--ink);font-weight:600}
+.hero-cta{margin-top:38px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.note{margin:0;color:var(--muted);font-size:16px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:17px;letter-spacing:-.005em;color:#fff;background:var(--blue);padding:16px 26px;border-radius:12px;text-decoration:none;transition:background .15s ease,transform .15s ease,box-shadow .15s ease}
+.btn:hover{background:var(--blue-dark)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 4px var(--tint)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* sections */
+section{padding:64px 0}
+.rule{border:0;border-top:1px solid var(--hair);margin:0}
+h2{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.08;letter-spacing:-.03em;font-weight:600;text-wrap:balance}
+h2 .grey{color:var(--muted)}
+.lead{margin:18px 0 0;font-size:20px;line-height:1.45;color:var(--text);letter-spacing:-.01em;max-width:520px}
+
+/* jobs */
+.jobs{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}
+.stops{list-style:none;margin:0;padding:0}
+.stops li{position:relative;padding:0 0 34px 52px}
+.stops li:last-child{padding-bottom:0}
+.stops li::before{content:"";position:absolute;left:3px;top:8px;width:14px;height:14px;border-radius:50%;border:2.5px solid var(--blue);background:#fff;box-shadow:0 0 0 4px var(--tint);z-index:1}
+.stops li:not(:last-child)::after{content:"";position:absolute;left:9px;top:15px;width:2px;height:100%;background:var(--blue)}
+.stops h3{margin:0;font-size:22px;line-height:1.3;font-weight:500;letter-spacing:-.015em}
+.stops p{margin:6px 0 0;font-size:17px;line-height:1.5;color:var(--text);max-width:520px}
+.claim{margin:56px 0 0;font-size:clamp(22px,2.6vw,30px);line-height:1.25;letter-spacing:-.025em;font-weight:600;color:var(--muted)}
+.claim em{font-style:normal;color:var(--blue)}
+.claim em i{font-style:italic}
+
+/* form section */
+.tell{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"head panel" "steps panel";grid-template-rows:auto 1fr;column-gap:56px;row-gap:0;align-items:start}
+.t-head{grid-area:head}.t-steps{grid-area:steps}.tell .panel{grid-area:panel}
+.next{list-style:none;margin:40px 0 0;padding:0}
+.next li{position:relative;padding:0 0 26px 52px;font-size:17px;line-height:1.5;color:var(--text)}
+.next li:last-child{padding-bottom:0}
+.next li::before{content:attr(data-n);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--tint);background:var(--tint-soft);color:var(--blue);font-size:14px;font-weight:600;display:grid;place-items:center}
+.next li:not(:last-child)::after{content:"";position:absolute;left:14.5px;top:34px;width:1px;height:calc(100% - 8px);background:var(--tint)}
+.next strong{display:block;color:var(--ink);font-weight:600;font-size:17px}
+.who{margin:36px 0 0;padding-top:24px;border-top:1px solid var(--hair);font-size:16px;color:var(--muted);max-width:440px}
+
+.who-more{display:block;margin-top:10px}
+.in-link{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:16px;font-weight:500;color:var(--blue);text-decoration:none;border:1px solid var(--tint);background:var(--tint-soft);border-radius:999px;padding:9px 16px;transition:background .15s ease,border-color .15s ease}
+.in-link:hover{background:#E3EAF4;border-color:var(--blue)}
+.in-link:focus-visible{outline:none;box-shadow:0 0 0 4px var(--tint)}
+.in-link svg{width:18px;height:18px;flex:none}
+.panel{background:#fff;border:1px solid var(--hair);border-radius:24px;padding:40px;box-shadow:0 1px 2px rgba(29,29,31,.04),0 24px 60px -24px rgba(31,78,140,.18)}
+.field{margin:0 0 22px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:block;font-size:16px;font-weight:600;letter-spacing:-.005em;margin:0 0 8px}
+label .opt{font-weight:400;color:var(--muted)}
+.hint{margin:-2px 0 10px;font-size:15px;color:var(--muted)}
+input,textarea{width:100%;font:inherit;font-size:17px;color:var(--ink);background:#fff;border:1px solid var(--rule);border-radius:12px;padding:14px 16px;transition:border-color .15s ease,box-shadow .15s ease}
+input{height:54px}
+textarea{min-height:168px;resize:vertical;line-height:1.5}
+::placeholder{color:#767679;opacity:1}
+input:hover,textarea:hover{border-color:#B5B5BA}
+input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(195,208,227,.75)}
+[aria-invalid="true"]{border-color:#B3261E}
+[aria-invalid="true"]:focus{box-shadow:0 0 0 4px rgba(179,38,30,.15)}
+.err{display:none;margin:8px 0 0;font-size:15px;color:#B3261E}
+.field.bad .err{display:block}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.chip{appearance:none;cursor:pointer;font:inherit;font-size:15px;color:var(--text);background:#fff;border:1px solid var(--rule);border-radius:999px;padding:8px 14px;transition:all .15s ease}
+.chip:hover{border-color:var(--blue);color:var(--blue);background:var(--tint-soft)}
+.chip:focus-visible{outline:none;box-shadow:0 0 0 4px var(--tint);border-color:var(--blue)}
+.chips-label{margin:14px 0 0;font-size:14px;color:var(--muted)}
+
+.submit{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:8px}
+.fine{margin:18px 0 0;font-size:14px;color:var(--muted)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.done{display:none;text-align:left;padding:8px 0}
+.panel.sent form{display:none}
+.panel.sent .done{display:block}
+.done .tick{width:52px;height:52px;border-radius:50%;background:var(--tint-soft);border:1.5px solid var(--tint);display:grid;place-items:center;margin-bottom:22px}
+.done .tick svg{width:26px;height:26px;stroke:var(--blue);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:30;stroke-dashoffset:30;animation:draw .5s .15s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.done h3{margin:0;font-size:30px;line-height:1.15;letter-spacing:-.025em;font-weight:600}
+.done p{margin:14px 0 0;font-size:18px;color:var(--text);max-width:460px}
+.done .again{margin-top:24px;background:none;border:0;padding:0;font:inherit;font-size:16px;color:var(--blue);cursor:pointer;text-decoration:underline}
+.preview{display:none;margin-top:22px;padding:10px 14px;border:1px dashed var(--rule);border-radius:10px;font-size:13px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.preview.on{display:block}
+
+footer{padding:36px 0 56px;border-top:1px solid var(--hair);color:var(--muted);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* reveal */
+html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+html.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  html.js .reveal{opacity:1;transform:none;transition:none}
+  .done .tick svg{animation:none;stroke-dashoffset:0}
+  .btn,.chip,input,textarea{transition:none}
+}
+
+@media (max-width:900px){
+  .jobs{grid-template-columns:1fr;gap:40px}
+  .tell{grid-template-columns:1fr;grid-template-areas:"head" "panel" "steps";grid-template-rows:auto;row-gap:32px}
+  .hero{padding-top:40px}
+  section{padding:48px 0}
+}
+@media (max-width:560px){
+  .wrap{padding:0 20px}
+  .panel{padding:26px 20px;border-radius:20px}
+  .row{grid-template-columns:1fr;gap:0}
+  .top a.mail{display:none}
+  .btn{width:100%;justify-content:center}
+  .stops li{padding-left:44px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/" aria-label="Cardiff Data Systems home"><span>Cardiff</span> <span>Data</span> <span>Systems</span></a>
+    <a class="mail" href="mailto:hello@cardiffdatasystems.co.uk">hello@cardiffdatasystems.co.uk</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>We do the jobs<br><span class="grey">your IT firm doesn’t.</span></h1>
+      <p class="lede">Your IT firm keeps email and Word going. Your office techy gets everything else. <strong>Neither has time to fix the things that waste yours.</strong></p>
+      <div class="hero-cta">
+        <a class="btn" href="#tell-us">Tell us about the job
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+        <p class="note">No strings. We’ll tell you if we can help.</p>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <section class="jobs" aria-labelledby="kind">
+      <div class="reveal">
+        <h2 id="kind">The kind of jobs <span class="grey">we mean.</span></h2>
+        <p class="lead">Not the helpdesk. The work that sits between your systems and your people.</p>
+      </div>
+      <div class="reveal">
+        <ol class="stops">
+          <li>
+            <h3>Connect your apps and stop duplicating data.</h3>
+            <p>The same client details typed into one system, then again into another. We make your systems talk to each other.</p>
+          </li>
+          <li>
+            <h3>Safely automate repetitive admin with AI.</h3>
+            <p>Chasing, filing, copying, checking. You set the rules, a person checks what matters, and the routine gets done.</p>
+          </li>
+          <li>
+            <h3>Rebuild that old spreadsheet no one dares touch.</h3>
+            <p>The one everything depends on and only one person understands. We turn it into something safe to change.</p>
+          </li>
+        </ol>
+        <p class="claim">Too bespoke for off-the-shelf apps.<br>Too technical for your team.<br><em>We do <i>those</i> jobs.</em></p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section class="tell" id="tell-us" aria-labelledby="tell-h">
+      <div class="t-head reveal">
+        <h2 id="tell-h">Tell us <span class="grey">about the job.</span></h2>
+        <p class="lead">A few lines is plenty. If it’s hard to describe, that’s often the sign it’s one of ours.</p>
+      </div>
+      <div class="t-steps reveal">
+        <ol class="next" aria-label="What happens next">
+          <li data-n="1"><strong>You tell us about the job</strong>In your own words, however rough it is.</li>
+          <li data-n="2"><strong>We give you a call</strong>Usually a short chat to understand it properly. If we can help, we’ll talk through what it would take. If we can’t, we’ll tell you, and point you to someone who can.</li>
+        </ol>
+        <p class="who">Your message goes to Dan Bridge, who has spent 30 years building and fixing the systems organisations depend on.
+          <span class="who-more">Want to know who you’d be talking to? Read his background and what colleagues say about working with him.</span>
+          <a class="in-link" href="https://www.linkedin.com/in/danfbridge/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            Dan on LinkedIn <span aria-hidden="true">↗</span>
+          </a>
+        </p>
+      </div>
+
+      <div class="panel reveal" id="panel">
+        <form id="job-form" novalidate>
+          <div class="field" id="f-job">
+            <label for="job">What’s the job?</label>
+            <p class="hint" id="job-hint">What is it, and what makes it painful?</p>
+            <textarea id="job" name="job" required aria-describedby="job-hint job-err" placeholder="e.g. We type the same client details into our case system and then again into billing, and things go missing between the two…"></textarea>
+            <p class="err" id="job-err">Tell us a little about the job.</p>
+            <p class="chips-label">Not sure where to start? Tap one:</p>
+            <div class="chips" role="group" aria-label="Starting points">
+              <button type="button" class="chip" data-text="The same details get typed into more than one system.">Same details in two systems</button>
+              <button type="button" class="chip" data-text="There’s a spreadsheet everything depends on and only one person understands it.">A spreadsheet only one person understands</button>
+              <button type="button" class="chip" data-text="We have an old database and we can’t get the reports we need out of it.">An old database, no useful reports</button>
+              <button type="button" class="chip" data-text="There’s repetitive admin we’d like to automate.">Repetitive admin</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field" id="f-name">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+              <p class="err" id="name-err">Please add your name.</p>
+            </div>
+            <div class="field" id="f-firm">
+              <label for="firm">Firm <span class="opt">(optional)</span></label>
+              <input id="firm" name="firm" type="text" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="field" id="f-email">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="email-err">
+            <p class="err" id="email-err">Please add an email address so we can reply.</p>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label for="website">Leave this empty</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="source" value="your-jobs / postcard E">
+
+          <div class="submit">
+            <button class="btn" type="submit" id="send">Tell us about it
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <span class="note">No strings. We’ll tell you if we can help.</span>
+          </div>
+          <p class="fine" id="send-err" role="alert" style="display:none;color:#B3261E"></p>
+          <p class="fine">We’ll only use your details to reply to you.</p>
+        </form>
+
+        <div class="done" id="done" tabindex="-1" role="status" aria-live="polite">
+          <div class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h3>Thanks, we’ve got it.</h3>
+          <p>We’ll read it and reply to <strong id="done-email"></strong>, usually with a question or two.</p>
+          <button type="button" class="again" id="again">Tell us about another job</button>
+          <div class="preview" id="preview">Preview only: the form isn’t connected yet, so nothing was sent.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>Cardiff Data Systems · Cardiff, UK</span>
+    <a href="mailto:hello@cardiffdatasystems.co.uk">hello@cardiffdatasystems.co.uk</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ------------------------------------------------------------------
+  // CONNECT THE FORM HERE.
+  // Set FORM_ENDPOINT to a URL that accepts a JSON POST (Formspree, a
+  // Supabase edge function, Google Apps Script, etc.). While it is empty
+  // the page runs in preview mode: the form validates and shows the thank-you
+  // state, but nothing is sent. Remove the "preview" notice when connected.
+  // ------------------------------------------------------------------
+  var FORM_ENDPOINT = "";
+
+  var form = document.getElementById('job-form');
+  var panel = document.getElementById('panel');
+  var job = document.getElementById('job');
+  var sendBtn = document.getElementById('send');
+  var sendErr = document.getElementById('send-err');
+
+  // example chips
+  document.querySelectorAll('.chip').forEach(function (c) {
+    c.addEventListener('click', function () {
+      var t = c.getAttribute('data-text');
+      var v = job.value.replace(/\s+$/, '');
+      job.value = (v ? v + '\n' : '') + t + ' ';
+      job.focus();
+      job.setSelectionRange(job.value.length, job.value.length);
+      clearError('f-job', job);
+    });
+  });
+
+  function setError(id, input) {
+    document.getElementById(id).classList.add('bad');
+    input.setAttribute('aria-invalid', 'true');
+  }
+  function clearError(id, input) {
+    document.getElementById(id).classList.remove('bad');
+    input.removeAttribute('aria-invalid');
+  }
+  [['f-job', 'job'], ['f-name', 'name'], ['f-email', 'email']].forEach(function (p) {
+    var el = document.getElementById(p[1]);
+    el.addEventListener('input', function () { clearError(p[0], el); });
+  });
+
+  function validate() {
+    var ok = true, first = null;
+    var name = document.getElementById('name'), email = document.getElementById('email');
+    if (!job.value.trim()) { setError('f-job', job); ok = false; first = first || job; }
+    if (!name.value.trim()) { setError('f-name', name); ok = false; first = first || name; }
+    var em = email.value.trim();
+    if (!em || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) {
+      document.getElementById('email-err').textContent = em ? 'That email doesn’t look quite right.' : 'Please add an email address so we can reply.';
+      setError('f-email', email); ok = false; first = first || email;
+    }
+    if (first) first.focus();
+    return ok;
+  }
+
+  function showDone(email) {
+    document.getElementById('done-email').textContent = email;
+    document.getElementById('preview').classList.toggle('on', !FORM_ENDPOINT);
+    panel.classList.add('sent');
+    document.getElementById('done').focus();
+    var top = panel.getBoundingClientRect().top;
+    if (top < 0 || top > window.innerHeight * 0.5) panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    sendErr.style.display = 'none';
+    if (!validate()) return;
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = typeof v === 'string' ? v.trim() : v; });
+    data.page = location.href;
+    data.sent_at = new Date().toISOString();
+
+    // spam trap: bots fill the hidden field. Pretend success, send nothing.
+    if (data.website) { showDone(data.email); return; }
+    delete data.website;
+
+    if (!FORM_ENDPOINT) { showDone(data.email); return; }
+
+    sendBtn.disabled = true;
+    sendBtn.style.opacity = .7;
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      if (!r.ok) throw new Error('bad status');
+      showDone(data.email);
+    }).catch(function () {
+      sendErr.textContent = 'Sorry, that didn’t send. Please try again, or email hello@cardiffdatasystems.co.uk.';
+      sendErr.style.display = 'block';
+    }).then(function () {
+      sendBtn.disabled = false;
+      sendBtn.style.opacity = 1;
+    });
+  });
+
+  document.getElementById('again').addEventListener('click', function () {
+    form.reset();
+    panel.classList.remove('sent');
+    job.focus();
+  });
+
+  // gentle reveal on scroll (also reveals anything scrolled past by an anchor jump)
+  var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  function reveal() {
+    var h = window.innerHeight * 0.92;
+    els = els.filter(function (el) {
+      if (el.getBoundingClientRect().top < h) { el.classList.add('in'); return false; }
+      return true;
+    });
+    if (!els.length) { window.removeEventListener('scroll', reveal); window.removeEventListener('resize', reveal); }
+  }
+  window.addEventListener('scroll', reveal, { passive: true });
+  window.addEventListener('resize', reveal);
+  reveal();
+})();
+</script>
+</body>
+</html>
