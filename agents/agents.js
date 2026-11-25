@@ -246,8 +246,8 @@
       var mailto = 'mailto:' + CONTACT + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(summary);
       html += '<div class="results-cta">' +
         '<h3>Want this turned into a plan?</h3>' +
-        '<p>Email your results to me and I\'ll reply with a short, honest view of what\'s worth doing first, and what isn\'t. No obligation and no sales sequence.</p>' +
-        '<p><a class="button" href="' + mailto + '">Email me these results <span aria-hidden="true">↗</span></a> ' +
+        '<p>Email your results to us and we\'ll reply with a short, honest view of what\'s worth doing first, and what isn\'t. No obligation and no sales sequence.</p>' +
+        '<p><a class="button" href="' + mailto + '">Email us these results <span aria-hidden="true">↗</span></a> ' +
         '<button type="button" class="button button-outline" data-action="back">Change my answers</button></p>' +
         '</div>';
     }

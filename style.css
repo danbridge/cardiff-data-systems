@@ -284,3 +284,4 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
 .how-it-works .sub-heading em { font-style:normal; color:var(--muted); }
 .how-it-works .sub-heading { margin-bottom:22px; }
 .home > section:nth-of-type(odd).focus { background:#fff; }
+.focus .hero-actions { margin-top:28px; }
