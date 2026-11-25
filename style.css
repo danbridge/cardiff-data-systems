@@ -113,6 +113,7 @@ button.button { font:inherit; font-weight:600; font-size:17px; }
 .reference { border:1px solid var(--hair); border-radius:20px; padding:28px; }
 .reference-quote { font-size:18px; letter-spacing:-.01em; line-height:1.45; color:var(--text); margin-bottom:20px; }
 .reference-name { margin:0; }
+.reference-name.plain { font-size:17px; font-weight:600; color:var(--blue); padding:6px 0; }
 .reference-role { font-size:15px; color:var(--muted); margin:2px 0 0; }
 .reference-role a { text-decoration:underline; text-underline-offset:2px; }
 .in-link { display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:500; color:var(--blue); border:1px solid var(--tint); background:var(--tint-soft); border-radius:999px; padding:9px 16px; transition:background .15s,border-color .15s; }
