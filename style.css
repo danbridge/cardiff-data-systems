@@ -237,3 +237,14 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
   .stack-items { gap:8px; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button,.stack-item,.site-nav a,.in-link { transition:none; } }
+
+/* Privacy page + footer privacy link */
+.copyright a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.copyright a:hover { color:var(--ink); }
+.privacy-text { max-width:680px; }
+.privacy-text h3 { margin:34px 0 8px; font-size:20px; font-weight:600; letter-spacing:-.015em; color:var(--ink); }
+.privacy-text h3:first-of-type { margin-top:0; }
+.privacy-text p { margin:0; color:var(--text); }
+.privacy-text a { color:var(--blue); text-decoration:underline; text-underline-offset:3px; }
+.privacy-updated { margin-top:36px !important; font-size:14px; color:var(--muted) !important; }
+.visually-hidden { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }

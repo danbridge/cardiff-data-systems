@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Those kinds of jobs · Cardiff Data Systems</title>
+<title>Your jobs · Cardiff Data Systems</title>
 <meta name="description" content="Your IT firm keeps email and Word going. Your office techy gets everything else. Cardiff Data Systems does the jobs in between. Tell us about yours.">
 <!-- Campaign page for the postcard QR. Remove this line if you want the page to appear in search results. -->
 <meta name="robots" content="noindex">
@@ -110,6 +110,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 
 
 .submit{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:8px}
 .fine{margin:18px 0 0;font-size:14px;color:var(--muted)}
+.fine a,footer a{color:inherit;text-underline-offset:3px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
 .done{display:none;text-align:left;padding:8px 0}
@@ -121,8 +122,8 @@ input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 
 .done h3{margin:0;font-size:30px;line-height:1.15;letter-spacing:-.025em;font-weight:600}
 .done p{margin:14px 0 0;font-size:18px;color:var(--text);max-width:460px}
 .done .again{margin-top:24px;background:none;border:0;padding:0;font:inherit;font-size:16px;color:var(--blue);cursor:pointer;text-decoration:underline}
-.preview{display:none;margin-top:22px;padding:10px 14px;border:1px dashed var(--rule);border-radius:10px;font-size:13px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.preview.on{display:block}
+
+
 
 footer{padding:36px 0 56px;border-top:1px solid var(--hair);color:var(--muted);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
@@ -222,7 +223,7 @@ html.js .reveal.in{opacity:1;transform:none}
       <div class="t-steps reveal">
         <ol class="next" aria-label="What happens next">
           <li data-n="1"><strong>You tell us about the job</strong>In your own words, however rough it is.</li>
-          <li data-n="2"><strong>We give you a call</strong>Usually a short chat to understand it properly. If we can help, we’ll talk through what it would take. If we can’t, we’ll tell you, and point you to someone who can.</li>
+          <li data-n="2"><strong>We get in touch</strong>Usually a short chat to understand it properly. If we can help, we’ll talk through what it would take. If we can’t, we’ll tell you, and point you to someone who can.</li>
         </ol>
         <p class="who">Your message goes to Dan Bridge, who has spent 30 years building and fixing the systems organisations depend on.
           <span class="who-more">Want to know who you’d be talking to? Read his background and what colleagues say about working with him.</span>
@@ -269,6 +270,11 @@ html.js .reveal.in{opacity:1;transform:none}
             <p class="err" id="email-err">Please add an email address so we can reply.</p>
           </div>
 
+          <div class="field" id="f-phone">
+            <label for="phone">Phone <span class="opt">(optional, if you’d prefer a call)</span></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+          </div>
+
           <div class="hp" aria-hidden="true">
             <label for="website">Leave this empty</label>
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
@@ -282,15 +288,15 @@ html.js .reveal.in{opacity:1;transform:none}
             <span class="note">No strings. We’ll tell you if we can help.</span>
           </div>
           <p class="fine" id="send-err" role="alert" style="display:none;color:#B3261E"></p>
-          <p class="fine">We’ll only use your details to reply to you.</p>
+          <p class="fine">We’ll only use your details to reply to you. <a href="../privacy/index.html">Privacy</a></p>
         </form>
 
         <div class="done" id="done" tabindex="-1" role="status" aria-live="polite">
           <div class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-          <h3>Thanks, we’ve got it.</h3>
-          <p>We’ll read it and reply to <strong id="done-email"></strong>, usually with a question or two.</p>
+          <h3 id="done-title">Thanks, we’ve got it.</h3>
+          <p id="done-text">We’ll read it and reply to <strong id="done-email"></strong>, usually with a question or two.</p>
           <button type="button" class="again" id="again">Tell us about another job</button>
-          <div class="preview" id="preview">Preview only: the form isn’t connected yet, so nothing was sent.</div>
+          
         </div>
       </div>
     </section>
@@ -300,7 +306,7 @@ html.js .reveal.in{opacity:1;transform:none}
 <footer>
   <div class="wrap">
     <span>Cardiff Data Systems · Cardiff, UK</span>
-    <a href="mailto:hello@cardiffdatasystems.co.uk">hello@cardiffdatasystems.co.uk</a>
+    <span><a href="mailto:hello@cardiffdatasystems.co.uk">hello@cardiffdatasystems.co.uk</a> · <a href="../privacy/index.html">Privacy</a></span>
   </div>
 </footer>
 
@@ -311,8 +317,8 @@ html.js .reveal.in{opacity:1;transform:none}
   // CONNECT THE FORM HERE.
   // Set FORM_ENDPOINT to a URL that accepts a JSON POST (Formspree, a
   // Supabase edge function, Google Apps Script, etc.). While it is empty
-  // the page runs in preview mode: the form validates and shows the thank-you
-  // state, but nothing is sent. Remove the "preview" notice when connected.
+  // the form opens the visitor's email app with their message pre-filled
+  // (mailto fallback), so no enquiry is lost.
   // ------------------------------------------------------------------
   var FORM_ENDPOINT = "";
 
@@ -361,9 +367,12 @@ html.js .reveal.in{opacity:1;transform:none}
     return ok;
   }
 
-  function showDone(email) {
-    document.getElementById('done-email').textContent = email;
-    document.getElementById('preview').classList.toggle('on', !FORM_ENDPOINT);
+  function showDone(email, viaMail) {
+    document.getElementById('done-title').textContent = viaMail ? 'One last step: press send.' : 'Thanks, we’ve got it.';
+    document.getElementById('done-text').innerHTML = viaMail
+      ? 'Your email app should have opened with your message ready to go. Just press send. If nothing opened, email us at <strong>hello@cardiffdatasystems.co.uk</strong> and paste your message in.'
+      : 'We’ll read it and reply to <strong id="done-email"></strong>, usually with a question or two.';
+    var de = document.getElementById('done-email'); if (de) de.textContent = email;
     panel.classList.add('sent');
     document.getElementById('done').focus();
     var top = panel.getBoundingClientRect().top;
@@ -383,7 +392,17 @@ html.js .reveal.in{opacity:1;transform:none}
     if (data.website) { showDone(data.email); return; }
     delete data.website;
 
-    if (!FORM_ENDPOINT) { showDone(data.email); return; }
+    // Until a form service is connected, hand the message to the visitor's own
+    // email app so nothing is ever silently lost.
+    if (!FORM_ENDPOINT) {
+      var body = 'Job: ' + data.job + '\n\nName: ' + data.name +
+        (data.firm ? '\nFirm: ' + data.firm : '') + '\nEmail: ' + data.email +
+        (data.phone ? '\nPhone: ' + data.phone : '') + '\n\n(Sent from ' + data.source + ')';
+      window.location.href = 'mailto:hello@cardiffdatasystems.co.uk?subject=' +
+        encodeURIComponent('Job enquiry from ' + data.name) + '&body=' + encodeURIComponent(body);
+      showDone(data.email, true);
+      return;
+    }
 
     sendBtn.disabled = true;
     sendBtn.style.opacity = .7;
