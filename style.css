@@ -280,3 +280,7 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
 .home > section:nth-of-type(even) .project-tags span { background:#fff; }
 .home > section:nth-of-type(even) .project,
 .home > section:nth-of-type(even) .reference { background:#fff; }
+.how-it-works .sub-heading { margin:64px 0 0; max-width:520px; font-size:clamp(28px,3.4vw,40px); line-height:1.08; font-weight:600; letter-spacing:-.028em; color:var(--ink); }
+.how-it-works .sub-heading em { font-style:normal; color:var(--muted); }
+.how-it-works .sub-heading { margin-bottom:22px; }
+.home > section:nth-of-type(odd).focus { background:#fff; }
