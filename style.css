@@ -248,3 +248,17 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
 .privacy-text a { color:var(--blue); text-decoration:underline; text-underline-offset:3px; }
 .privacy-updated { margin-top:36px !important; font-size:14px; color:var(--muted) !important; }
 .visually-hidden { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+/* Marketing: flip-card postcards */
+.postcards { padding:8px var(--px) 96px; }
+.postcard-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr)); gap:48px 36px; }
+.postcard-item { margin:0; }
+.postcard { display:block; width:100%; padding:0; border:0; background:none; cursor:pointer; perspective:1400px; font:inherit; -webkit-tap-highlight-color:transparent; }
+.postcard-inner { position:relative; display:block; width:100%; aspect-ratio:794/559; transition:transform .6s cubic-bezier(.4,.2,.2,1); transform-style:preserve-3d; }
+.postcard.flipped .postcard-inner { transform:rotateY(180deg); }
+.postcard-face { position:absolute; inset:0; width:100%; height:100%; display:block; border-radius:12px; border:1px solid var(--hair); box-shadow:0 8px 28px rgba(29,29,31,.08); backface-visibility:hidden; -webkit-backface-visibility:hidden; background:#fff; }
+.postcard-back { transform:rotateY(180deg); }
+.postcard:focus-visible { outline:3px solid var(--tint); outline-offset:6px; border-radius:14px; }
+.postcard-item figcaption { margin-top:16px; font-size:15px; color:var(--muted); }
+.postcard-item figcaption strong { color:var(--ink); font-weight:600; }
+@media (prefers-reduced-motion:reduce) { .postcard-inner { transition:none; } }

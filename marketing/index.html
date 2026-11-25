@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cardiff Data Systems postcards." />
+    <title>Marketing — Cardiff Data Systems</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css?v=8" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Cardiff Data Systems home">
+        <span>Cardiff</span> <span>Data</span> <span>Systems</span>
+      </a>
+      <div class="header-right">
+        <nav class="site-nav" aria-label="Main">
+          <a href="../index.html">Home</a>
+          <a href="../data-science/index.html">Data science</a>
+          <a href="../your-jobs/index.html">Your jobs</a>
+          <a href="../agents/index.html">AI agent checker</a>
+          <a href="../experience/index.html">Experience</a>
+        </nav>
+        <a class="contact-link" href="mailto:dan@cardiffdatasystems.co.uk">Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero hero-short" aria-labelledby="hero-title">
+        <p class="eyebrow">Marketing</p>
+        <h1 id="hero-title">The <em>postcards.</em></h1>
+        <div class="hero-bottom"><p class="hero-intro">A5 letterbox cards, fronts shown. Tap a card to turn it over.</p></div>
+      </section>
+      <section class="postcards" aria-label="Postcards">
+        <div class="postcard-grid">
+          <figure class="postcard-item">
+            <button class="postcard" type="button" aria-pressed="false" aria-label="Postcard A: Does your business work without you?. Show the reverse">
+              <span class="postcard-inner">
+                <img class="postcard-face postcard-front" src="img/a-front.webp" width="794" height="559" alt="Postcard A, front" loading="lazy" />
+                <img class="postcard-face postcard-back" src="img/a-back.webp" width="794" height="559" alt="Postcard A, reverse" loading="lazy" aria-hidden="true" />
+              </span>
+            </button>
+            <figcaption><strong>Card A</strong> · Does your business work without you?</figcaption>
+          </figure>
+          <figure class="postcard-item">
+            <button class="postcard" type="button" aria-pressed="false" aria-label="Postcard B: AI agents (ChatGPT gives you answers). Show the reverse">
+              <span class="postcard-inner">
+                <img class="postcard-face postcard-front" src="img/b-front.webp" width="794" height="559" alt="Postcard B, front" loading="lazy" />
+                <img class="postcard-face postcard-back" src="img/b-back.webp" width="794" height="559" alt="Postcard B, reverse" loading="lazy" aria-hidden="true" />
+              </span>
+            </button>
+            <figcaption><strong>Card B</strong> · AI agents (ChatGPT gives you answers)</figcaption>
+          </figure>
+          <figure class="postcard-item">
+            <button class="postcard" type="button" aria-pressed="false" aria-label="Postcard C: Data (Is your business running on a hunch?). Show the reverse">
+              <span class="postcard-inner">
+                <img class="postcard-face postcard-front" src="img/c-front.webp" width="794" height="559" alt="Postcard C, front" loading="lazy" />
+                <img class="postcard-face postcard-back" src="img/c-back.webp" width="794" height="559" alt="Postcard C, reverse" loading="lazy" aria-hidden="true" />
+              </span>
+            </button>
+            <figcaption><strong>Card C</strong> · Data (Is your business running on a hunch?)</figcaption>
+          </figure>
+          <figure class="postcard-item">
+            <button class="postcard" type="button" aria-pressed="false" aria-label="Postcard D: AI agents (Do you have to do everything around here?). Show the reverse">
+              <span class="postcard-inner">
+                <img class="postcard-face postcard-front" src="img/d-front.webp" width="794" height="559" alt="Postcard D, front" loading="lazy" />
+                <img class="postcard-face postcard-back" src="img/d-back.webp" width="794" height="559" alt="Postcard D, reverse" loading="lazy" aria-hidden="true" />
+              </span>
+            </button>
+            <figcaption><strong>Card D</strong> · AI agents (Do you have to do everything around here?)</figcaption>
+          </figure>
+          <figure class="postcard-item">
+            <button class="postcard" type="button" aria-pressed="false" aria-label="Postcard E: Small jobs (We do the jobs your IT firm doesn’t). Show the reverse">
+              <span class="postcard-inner">
+                <img class="postcard-face postcard-front" src="img/e-front.webp" width="794" height="559" alt="Postcard E, front" loading="lazy" />
+                <img class="postcard-face postcard-back" src="img/e-back.webp" width="794" height="559" alt="Postcard E, reverse" loading="lazy" aria-hidden="true" />
+              </span>
+            </button>
+            <figcaption><strong>Card E</strong> · Small jobs (We do the jobs your IT firm doesn’t)</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand footer-brand" href="../index.html"><span>Cardiff</span> <span>Data</span> <span>Systems</span></a>
+      <p>Dan Bridge · Software engineer &amp; CTO</p>
+      <a href="mailto:dan@cardiffdatasystems.co.uk">dan@cardiffdatasystems.co.uk</a>
+      <p class="copyright">© <span id="year"></span> Cardiff Data Systems · <a href="../privacy/index.html">Privacy</a> · <a href="../marketing/index.html">Marketing</a></p>
+    </footer>
+    <script src="../site.js" defer></script>
+    <script>
+      document.querySelectorAll('.postcard').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var flipped = btn.classList.toggle('flipped');
+          btn.setAttribute('aria-pressed', flipped ? 'true' : 'false');
+          var label = btn.getAttribute('aria-label').replace(/\. (Show the reverse|Show the front)$/, '');
+          btn.setAttribute('aria-label', label + (flipped ? '. Show the front' : '. Show the reverse'));
+          var f = btn.querySelector('.postcard-front'), b = btn.querySelector('.postcard-back');
+          f.setAttribute('aria-hidden', flipped ? 'true' : 'false');
+          b.setAttribute('aria-hidden', flipped ? 'false' : 'true');
+        });
+      });
+    </script>
+
+  </body>
+</html>
