@@ -269,3 +269,14 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
 .check-card h3 { margin:0 0 10px; font-size:21px; font-weight:600; letter-spacing:-.018em; color:var(--ink); }
 .check-card p { margin:0 0 18px; color:var(--text); font-size:16px; line-height:1.5; }
 .inline-link { color:var(--blue); font-weight:500; text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
+
+/* Home: alternate white and soft-blue bands */
+:root { --band:#E8EEF8; }
+.home > section:nth-of-type(even) { background:var(--band); }
+.home > section:nth-of-type(even) .section-grid,
+.home > section:nth-of-type(even).section-grid,
+.home > section:nth-of-type(even).references { border-top-color:#D3DEEF; }
+.home > section:nth-of-type(even) .in-link { background:#fff; }
+.home > section:nth-of-type(even) .project-tags span { background:#fff; }
+.home > section:nth-of-type(even) .project,
+.home > section:nth-of-type(even) .reference { background:#fff; }
