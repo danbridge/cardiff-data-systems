@@ -219,7 +219,7 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
 @media (max-width:640px) {
   .site-header { flex-wrap:wrap; gap:14px 20px; padding-top:22px; }
   .header-right { width:100%; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-  .site-nav { gap:14px; flex-wrap:wrap; } .site-nav a { font-size:14.5px; }
+  .site-nav { gap:4px 14px; flex-wrap:wrap; } .site-nav a { font-size:14.5px; }
   .contact-link { display:none; }
   .hero { padding-top:36px; }
   .button { width:100%; justify-content:center; }

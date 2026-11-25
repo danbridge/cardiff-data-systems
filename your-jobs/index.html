@@ -22,10 +22,16 @@ a{color:var(--blue)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 
 /* header */
-.top{display:flex;align-items:center;justify-content:space-between;padding:28px 0}
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 0}
+.brand{display:inline-flex;gap:.28em;line-height:1.2}
+.header-right{display:flex;align-items:center;gap:32px}
+.site-nav{display:flex;gap:26px}
+.site-nav a{font-size:16px;font-weight:500;color:var(--text);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;transition:color .25s ease,border-color .25s ease}
+.site-nav a:hover{color:var(--ink);border-bottom-color:#B5B5BA}
+.site-nav a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue)}
 .brand{font-size:20px;letter-spacing:-.01em;color:var(--blue);text-decoration:none;opacity:.85}
 .brand span:nth-child(1){font-weight:300}.brand span:nth-child(2){font-weight:400}.brand span:nth-child(3){font-weight:500}
-.top a.mail{font-size:16px;font-weight:500;text-decoration:none}
+.top a.mail{font-size:16px;font-weight:600;text-decoration:none}
 .top a.mail:hover{text-decoration:underline}
 
 /* hero */
@@ -128,7 +134,7 @@ html.js .reveal.in{opacity:1;transform:none}
   html{scroll-behavior:auto}
   html.js .reveal{opacity:1;transform:none;transition:none}
   .done .tick svg{animation:none;stroke-dashoffset:0}
-  .btn,.chip,input,textarea{transition:none}
+  .btn,.chip,input,textarea,.site-nav a{transition:none}
 }
 
 @media (max-width:900px){
@@ -141,6 +147,9 @@ html.js .reveal.in{opacity:1;transform:none}
   .wrap{padding:0 20px}
   .panel{padding:26px 20px;border-radius:20px}
   .row{grid-template-columns:1fr;gap:0}
+  .top{flex-wrap:wrap;gap:14px 20px;padding-top:22px}
+  .header-right{width:100%;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .site-nav{gap:4px 14px;flex-wrap:wrap}.site-nav a{font-size:14.5px}
   .top a.mail{display:none}
   .btn{width:100%;justify-content:center}
   .stops li{padding-left:44px}
@@ -152,8 +161,17 @@ html.js .reveal.in{opacity:1;transform:none}
 
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/" aria-label="Cardiff Data Systems home"><span>Cardiff</span> <span>Data</span> <span>Systems</span></a>
-    <a class="mail" href="mailto:hello@cardiffdatasystems.co.uk">hello@cardiffdatasystems.co.uk</a>
+    <a class="brand" href="../index.html" aria-label="Cardiff Data Systems home"><span>Cardiff</span> <span>Data</span> <span>Systems</span></a>
+    <div class="header-right">
+      <nav class="site-nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="../data-science/index.html">Data science</a>
+        <a href="../your-jobs/index.html" aria-current="page">Your jobs</a>
+        <a href="../agents/index.html">AI agent checker</a>
+        <a href="../about-us/index.html">About</a>
+      </nav>
+      <a class="mail" href="mailto:hello@cardiffdatasystems.co.uk">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
   <main>
@@ -286,6 +304,7 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </footer>
 
+<script src="../site.js" defer></script>
 <script>
 (function () {
   // ------------------------------------------------------------------
