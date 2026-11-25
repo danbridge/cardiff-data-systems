@@ -113,11 +113,14 @@ button.button { font:inherit; font-weight:600; font-size:17px; }
 .reference { border:1px solid var(--hair); border-radius:20px; padding:28px; }
 .reference-quote { font-size:18px; letter-spacing:-.01em; line-height:1.45; color:var(--text); margin-bottom:20px; }
 .reference-name { margin:0; }
-.reference-name a { font-weight:600; font-size:17px; color:var(--blue); }
-.reference-name a:hover { text-decoration:underline; text-underline-offset:3px; }
 .reference-role { font-size:15px; color:var(--muted); margin:2px 0 0; }
 .reference-role a { text-decoration:underline; text-underline-offset:2px; }
-.references-more { margin-top:32px; display:inline-flex; align-items:center; gap:8px; }
+.in-link { display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:500; color:var(--blue); border:1px solid var(--tint); background:var(--tint-soft); border-radius:999px; padding:9px 16px; transition:background .15s,border-color .15s; }
+.in-link:hover { background:#E3EAF4; border-color:var(--blue); }
+.in-link svg { width:18px; height:18px; flex:none; }
+.in-link-sm { font-size:15px; padding:6px 12px; gap:7px; }
+.in-link-sm svg { width:16px; height:16px; }
+.references-more { margin-top:32px; }
 .linkedin-icon { width:18px; height:18px; flex:none; }
 
 .about-teaser { }
@@ -232,4 +235,4 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
   footer { grid-template-columns:1fr; }
   .stack-items { gap:8px; }
 }
-@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button,.stack-item,.site-nav a { transition:none; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button,.stack-item,.site-nav a,.in-link { transition:none; } }
