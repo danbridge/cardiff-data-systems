@@ -73,6 +73,11 @@ h2 .grey{color:var(--muted)}
 .next strong{display:block;color:var(--ink);font-weight:600;font-size:17px}
 .who{margin:36px 0 0;padding-top:24px;border-top:1px solid var(--hair);font-size:16px;color:var(--muted);max-width:440px}
 
+.who-more{display:block;margin-top:10px}
+.in-link{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:16px;font-weight:500;color:var(--blue);text-decoration:none;border:1px solid var(--tint);background:var(--tint-soft);border-radius:999px;padding:9px 16px;transition:background .15s ease,border-color .15s ease}
+.in-link:hover{background:#E3EAF4;border-color:var(--blue)}
+.in-link:focus-visible{outline:none;box-shadow:0 0 0 4px var(--tint)}
+.in-link svg{width:18px;height:18px;flex:none}
 .panel{background:#fff;border:1px solid var(--hair);border-radius:24px;padding:40px;box-shadow:0 1px 2px rgba(29,29,31,.04),0 24px 60px -24px rgba(31,78,140,.18)}
 .field{margin:0 0 22px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -201,7 +206,13 @@ html.js .reveal.in{opacity:1;transform:none}
           <li data-n="2"><strong>We read it and reply</strong>With a question or two, or an honest “that’s not for us”.</li>
           <li data-n="3"><strong>If it’s a fit, we talk</strong>A short call to work out what it would take.</li>
         </ol>
-        <p class="who">Your message goes to Dan Bridge, who has spent 30 years building and fixing the systems organisations depend on.</p>
+        <p class="who">Your message goes to Dan Bridge, who has spent 30 years building and fixing the systems organisations depend on.
+          <span class="who-more">Want to know who you’d be talking to? Read his background and what colleagues say about working with him.</span>
+          <a class="in-link" href="https://www.linkedin.com/in/danfbridge/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            Dan on LinkedIn <span aria-hidden="true">↗</span>
+          </a>
+        </p>
       </div>
 
       <div class="panel reveal" id="panel">
