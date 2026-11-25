@@ -263,3 +263,9 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
 .postcard-item figcaption strong { color:var(--ink); font-weight:600; }
 @media (prefers-reduced-motion:reduce) { .postcard-inner { transition:none; } }
 .intro .light { font-weight:300; font-size:.85em; }
+
+/* Home: free checkers strip */
+.check-grid { margin-top:30px; }
+.check-card h3 { margin:0 0 10px; font-size:21px; font-weight:600; letter-spacing:-.018em; color:var(--ink); }
+.check-card p { margin:0 0 18px; color:var(--text); font-size:16px; line-height:1.5; }
+.inline-link { color:var(--blue); font-weight:500; text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
