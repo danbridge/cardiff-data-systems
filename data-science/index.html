@@ -64,61 +64,24 @@
       </section>
 
       <form id="checker" class="checker" novalidate>
-        <section class="section-grid" aria-labelledby="biz-title">
-          <p class="section-label">01 / Your organisation</p>
-          <div>
-            <h2 id="biz-title">A little context.</h2>
-            <div class="field">
-              <label for="biz-type">What kind of organisation is it?</label>
-              <select id="biz-type" name="biz-type">
-                <option value="a law firm">Law firm</option>
-                <option value="an accountancy practice">Accountancy practice</option>
-                <option value="a lettings or estate agency">Lettings or estate agency</option>
-                <option value="a charity or faith organisation">Charity, faith group or community body</option>
-                <option value="a housing association or membership organisation">Housing association or membership body</option>
-                <option value="another professional services firm">Other professional services</option>
-                <option value="another office-based organisation" selected>Other office-based organisation</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="biz-size">How many people work there?</label>
-              <select id="biz-size" name="biz-size">
-                <option value="1–9 people">1–9</option>
-                <option value="10–50 people" selected>10–50</option>
-                <option value="51–150 people">51–150</option>
-                <option value="more than 150 people">More than 150</option>
-              </select>
-            </div>
-          </div>
-        </section>
-
         <section class="section-grid" aria-labelledby="found-title">
-          <p class="section-label">02 / Your records</p>
+          <p class="section-label">01 / Your data</p>
           <div>
-            <h2 id="found-title">How good is the raw material?</h2>
+            <h2 id="found-title">Eight quick questions.</h2>
             <p class="form-help">Think about your <strong>main system or set of records</strong>. A rough answer is fine, and "not sure" is a perfectly good answer.</p>
             <ul class="task-list" id="found-list"></ul>
-          </div>
-        </section>
-
-        <section class="section-grid" aria-labelledby="types-title">
-          <p class="section-label">03 / What you hold</p>
-          <div>
-            <h2 id="types-title">Which of these do you keep?</h2>
-            <p class="form-help">For each kind of record, choose roughly how much you hold. Leave it as "None" if you don't keep it.</p>
-            <ul class="task-list" id="task-list"></ul>
-            <noscript><p class="form-help">This checker needs JavaScript to run. Or just email <a href="mailto:dan@cardiffdatasystems.co.uk">dan@cardiffdatasystems.co.uk</a> and tell me what records you keep.</p></noscript>
+            <noscript><p class="form-help">This checker needs JavaScript to run. Or just email <a href="mailto:dan@cardiffdatasystems.co.uk">dan@cardiffdatasystems.co.uk</a> and tell us what records you keep.</p></noscript>
             <div class="form-actions">
               <button class="button" type="submit">Show me what my data could do <span aria-hidden="true">→</span></button>
             </div>
-            <p class="form-note">Everything runs in your browser. Nothing you enter is sent anywhere unless you choose to email your results to me.</p>
+            <p class="form-note">Everything runs in your browser. Nothing you enter is sent anywhere.</p>
           </div>
         </section>
       </form>
 
       <section id="results" class="results" aria-labelledby="results-title" tabindex="-1" hidden>
         <div class="section-grid">
-          <p class="section-label">04 / Your results</p>
+          <p class="section-label">02 / Your results</p>
           <div id="results-body"></div>
         </div>
       </section>

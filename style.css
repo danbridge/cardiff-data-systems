@@ -204,6 +204,7 @@ select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 4px rgba
 .results-cta { margin-top:48px; padding-top:30px; border-top:2px solid var(--blue); max-width:760px; }
 .results-cta h3 { font-size:clamp(24px,3vw,32px); letter-spacing:-.025em; font-weight:600; margin-bottom:10px; }
 .results-cta p { color:var(--text); font-size:18px; }
+.results-email { margin-top:14px; font-size:16px !important; } .results-email a { color:var(--blue); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
 .results-cta .button { margin:6px 12px 6px 0; }
 
 /* ---------- Responsive ---------- */
