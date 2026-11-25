@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A free three-minute data checker for office-based organisations: find out whether the records you already hold could usefully support data science, and where to start." />
+    <title>Data science checker — Cardiff Data Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Cardiff Data Systems home">
+        <span>Cardiff</span> <span>Data</span> <span>Systems</span>
+      </a>
+      <div class="header-right">
+        <nav class="site-nav" aria-label="Main">
+          <a href="../index.html">Home</a>
+          <a href="../your-jobs/index.html">Your jobs</a>
+          <a href="../agents/index.html">AI agent checker</a>
+          <a href="../data-science/index.html" aria-current="page">Data science</a>
+          <a href="../about-us/index.html">About</a>
+        </nav>
+        <a class="contact-link" href="mailto:dan@cardiffdatasystems.co.uk">Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero hero-short" aria-labelledby="hero-title">
+        <p class="eyebrow">Data science · Free · About three minutes</p>
+        <h1 id="hero-title">Is there something <em>in your data?</em></h1>
+        <div class="hero-bottom">
+          <p class="intro">Most organisations hold years of records that could answer useful questions. Tell me what you keep and I'll show where data science could genuinely help, and where it's too early.</p>
+        </div>
+      </section>
+
+      <section class="what-is section-grid" aria-labelledby="what-title">
+        <p class="section-label">What it is</p>
+        <div>
+          <h2 id="what-title">Data science, <em>in plain English.</em></h2>
+          <p class="large-copy">Your organisation already records what happens: enquiries, clients, invoices, jobs, emails. Data science uses that history to answer three kinds of question.</p>
+          <ul class="stops">
+            <li>What is actually going on? A clear picture of what your records really show, beyond the monthly report.</li>
+            <li>Why does it keep happening? The patterns behind late payments, overrunning jobs or enquiries that go nowhere.</li>
+            <li>What is likely to happen next? Forecasts and early warnings, so you plan rather than react.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="way-of-working" aria-labelledby="help-title">
+        <div class="section-grid">
+          <p class="section-label">How it can help</p>
+          <div>
+            <h2 id="help-title">Better decisions, <em>fewer guesses.</em></h2>
+            <p>It isn't magic. It works when you have enough history, records that are reasonably consistent, and a decision worth improving. Often the first win is simply seeing clearly what you already hold.</p>
+          </div>
+        </div>
+        <div class="principles">
+          <article><span>01</span><h3>Plan with evidence</h3><p>Forecast busy periods, cash flow and workload from what has actually happened before.</p></article>
+          <article><span>02</span><h3>Spot what's slipping</h3><p>Flag late payers, stalled cases and unusual transactions before they become problems.</p></article>
+          <article><span>03</span><h3>Price and prioritise</h3><p>See which clients, work types and enquiries really earn their keep, and where effort is wasted.</p></article>
+        </div>
+      </section>
+
+      <form id="checker" class="checker" novalidate>
+        <section class="section-grid" aria-labelledby="biz-title">
+          <p class="section-label">01 / Your organisation</p>
+          <div>
+            <h2 id="biz-title">A little context.</h2>
+            <div class="field">
+              <label for="biz-type">What kind of organisation is it?</label>
+              <select id="biz-type" name="biz-type">
+                <option value="a law firm">Law firm</option>
+                <option value="an accountancy practice">Accountancy practice</option>
+                <option value="a lettings or estate agency">Lettings or estate agency</option>
+                <option value="a charity or faith organisation">Charity, faith group or community body</option>
+                <option value="a housing association or membership organisation">Housing association or membership body</option>
+                <option value="another professional services firm">Other professional services</option>
+                <option value="another office-based organisation" selected>Other office-based organisation</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="biz-size">How many people work there?</label>
+              <select id="biz-size" name="biz-size">
+                <option value="1–9 people">1–9</option>
+                <option value="10–50 people" selected>10–50</option>
+                <option value="51–150 people">51–150</option>
+                <option value="more than 150 people">More than 150</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-grid" aria-labelledby="found-title">
+          <p class="section-label">02 / Your records</p>
+          <div>
+            <h2 id="found-title">How good is the raw material?</h2>
+            <p class="form-help">Think about your <strong>main system or set of records</strong>. A rough answer is fine, and "not sure" is a perfectly good answer.</p>
+            <ul class="task-list" id="found-list"></ul>
+          </div>
+        </section>
+
+        <section class="section-grid" aria-labelledby="types-title">
+          <p class="section-label">03 / What you hold</p>
+          <div>
+            <h2 id="types-title">Which of these do you keep?</h2>
+            <p class="form-help">For each kind of record, choose roughly how much you hold. Leave it as "None" if you don't keep it.</p>
+            <ul class="task-list" id="task-list"></ul>
+            <noscript><p class="form-help">This checker needs JavaScript to run. Or just email <a href="mailto:dan@cardiffdatasystems.co.uk">dan@cardiffdatasystems.co.uk</a> and tell me what records you keep.</p></noscript>
+            <div class="form-actions">
+              <button class="button" type="submit">Show me what my data could do <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="form-note">Everything runs in your browser. Nothing you enter is sent anywhere unless you choose to email your results to me.</p>
+          </div>
+        </section>
+      </form>
+
+      <section id="results" class="results" aria-labelledby="results-title" tabindex="-1" hidden>
+        <div class="section-grid">
+          <p class="section-label">04 / Your results</p>
+          <div id="results-body"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand footer-brand" href="../index.html"><span>Cardiff</span> <span>Data</span> <span>Systems</span></a>
+      <p>Dan Bridge · Software engineer &amp; CTO</p>
+      <a href="mailto:dan@cardiffdatasystems.co.uk">dan@cardiffdatasystems.co.uk</a>
+      <p class="copyright">© <span id="year"></span> Cardiff Data Systems</p>
+    </footer>
+    <script src="../site.js" defer></script>
+    <script src="data-science.js" defer></script>
+  </body>
+</html>
