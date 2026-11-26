@@ -19,7 +19,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:var(--blue)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1136px;margin:0 auto;padding:0 28px}
 
 /* header */
 .top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 0}
@@ -33,9 +33,10 @@ a{color:var(--blue)}
 .brand span:nth-child(1){font-weight:300}.brand span:nth-child(2){font-weight:400}.brand span:nth-child(3){font-weight:500}
 .top a.mail{font-size:16px;font-weight:600;text-decoration:none}
 .top a.mail:hover{text-decoration:underline}
+.top a.mail span{font-size:.95em}
 
 /* hero */
-.hero{padding:64px 0 40px}
+.hero{padding:90px 0 40px}
 h1{margin:0;font-size:clamp(40px,7.4vw,88px);line-height:1.03;letter-spacing:-.035em;font-weight:600;color:var(--blue);text-wrap:balance}
 h1 .grey{color:var(--muted)}
 .lede{margin:30px 0 0;max-width:660px;font-size:clamp(19px,2.2vw,24px);line-height:1.4;letter-spacing:-.012em;color:var(--text)}
@@ -141,11 +142,11 @@ html.js .reveal.in{opacity:1;transform:none}
 @media (max-width:900px){
   .jobs{grid-template-columns:1fr;gap:40px}
   .tell{grid-template-columns:1fr;grid-template-areas:"head" "panel" "steps";grid-template-rows:auto;row-gap:32px}
-  .hero{padding-top:40px}
+  .hero{padding-top:62px}
   section{padding:48px 0}
 }
 @media (max-width:560px){
-  .wrap{padding:0 20px}
+  .wrap{padding:0 28px}
   .panel{padding:26px 20px;border-radius:20px}
   .row{grid-template-columns:1fr;gap:0}
   .top{flex-wrap:wrap;gap:14px 20px;padding-top:22px}
